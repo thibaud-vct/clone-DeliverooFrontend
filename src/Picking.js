@@ -1,7 +1,7 @@
 const Picking = ({ data, handleClick, numberInStr }) => {
     const { id, title, price, quantity } = data;
     return (
-        <div id={id}>
+        <div id={id} style={{ display: "flex" }}>
             {quantity !== 0 && (
                 <>
                     <div>

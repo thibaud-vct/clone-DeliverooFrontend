@@ -13,7 +13,6 @@ const Cart = ({ cart, handleClick }) => {
         }
     };
     const { picking, total } = cart[0];
-    console.log("toto =>", total);
     return (
         <div>
             <button>Valider le panier</button>

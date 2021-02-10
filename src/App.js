@@ -29,19 +29,26 @@ function App() {
         fetchData();
     }, []);
 
+    // PICKING
     const handleClick = (meal) => {
-        console.log(Number(meal.price));
         const newCart = [...cart];
         const meals = newCart[0].picking.find((elem) => elem.id === meal.id);
         const total = newCart[0].total;
         if (!meals) {
+            // add meal
             newCart[0].picking.push(meal);
             total.subTotal += Number(meal.price);
             total.sum += Number(meal.price);
         } else {
+            // sum/sub meal
             meals.quantity += meal.quantity;
             total.subTotal += Number(meal.price);
             total.sum += Number(meal.price);
+            // delete meal
+            if (meals.quantity === 0) {
+                const index = newCart.indexOf(meal);
+                newCart[0].picking.splice(index, 1);
+            }
         }
         setCart(newCart);
     };
