@@ -1,4 +1,4 @@
-const MealSelection = ({ data, handleClick, numberInStr }) => {
+const Picking = ({ data, handleClick, numberInStr }) => {
     const { id, title, price, quantity } = data;
     return (
         <div id={id}>
@@ -40,4 +40,4 @@ const MealSelection = ({ data, handleClick, numberInStr }) => {
         </div>
     );
 };
-export default MealSelection;
+export default Picking;

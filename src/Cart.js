@@ -1,4 +1,4 @@
-import MealSelection from "./MealSelection";
+import Picking from "./Picking";
 const Cart = ({ cart, handleClick }) => {
     const numberInStr = (num) => {
         if (typeof num !== "number") {
@@ -21,7 +21,7 @@ const Cart = ({ cart, handleClick }) => {
                 <>
                     {picking.map((selection) => {
                         return (
-                            <MealSelection
+                            <Picking
                                 key={selection.id}
                                 data={selection}
                                 handleClick={handleClick}
