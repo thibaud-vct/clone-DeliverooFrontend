@@ -1,14 +1,20 @@
-const Restaurant = ({ restaurant, logo }) => {
-    const { name, description, picture } = restaurant;
+const Restaurant = ({ data, logo }) => {
+    const { name, description, picture } = data;
     return (
         <div>
             <div>
-                <img src={logo} alt="logo deliveroo"></img>
+                <img
+                    src={logo}
+                    alt="logo deliveroo"
+                    style={{ height: 40 }}
+                ></img>
             </div>
-            <div>
-                <h2>{name}</h2>
-                <p>{description}</p>
-                <img src={picture} alt={name} />
+            <div style={{ display: "flex" }}>
+                <div>
+                    <h2>{name}</h2>
+                    <p>{description}</p>
+                </div>
+                <img src={picture} alt={name} style={{ height: 300 }} />
             </div>
         </div>
     );

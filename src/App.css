@@ -1,0 +1,16 @@
+.meals {
+    display: flex;
+    flex-wrap: wrap;
+    width: 650px;
+    margin: 0 auto;
+}
+.meals > div {
+    display: flex;
+    width: 300px;
+    margin: 10px;
+    background-color: grey;
+}
+.meals > div > img {
+    height: 100px;
+    width: 80px;
+}
